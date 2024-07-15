@@ -27,12 +27,12 @@
 			reg = <0x1e>;
 		};
 		felica@29 {
-			compatible = "sony,cxd224x";
+			compatible = "sony,cxd224x-i2c";
 			reg = <0x29>;
 			interrupt-parent = <&tlmm>;
 			interrupts = <92 0x2002>;
-			cxd224x,irq_gpio = <&tlmm 92 0>;
-			cxd224x,wake_gpio = <&tlmm 93 0>;
+			sony,nfc_int = <&tlmm 92 0>;
+			sony,nfc_wake = <&tlmm 93 0>;
 
 			pinctrl-names = "felica_active","felica_suspend";
 			pinctrl-0 = <&msm_gpio_92>;
